@@ -11,3 +11,8 @@ RUN git config --global core.quotepath false
 
 COPY . .
 RUN pip install --no-cache-dir -e .
+
+ENV LLM__PROVIDER=OPENAI
+ENV LLM__META__MODEL=qwen-turbo
+ENV LLM__HTTP_CLIENT__API_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+ENV VCS__PROVIDER=GITLAB
